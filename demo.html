@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Demo — AttentionX</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="problem.html" class="nav-link">Problem</a></li>
+      <li><a href="solution.html" class="nav-link">Solution</a></li>
+      <li><a href="tech.html" class="nav-link">Tech Stack</a></li>
+      <li><a href="team.html" class="nav-link">Team</a></li>
+      <li><a href="demo.html" class="nav-link active nav-cta">Live Demo</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="page-hero-content">
+    <div class="badge animate-in" style="--delay:0.1s"><span class="badge-dot"></span> Live Demo</div>
+    <h1 class="page-hero-title animate-in" style="--delay:0.25s">Experience <span class="highlight-text">AttentionX</span><br/>in Action</h1>
+    <p class="page-hero-sub animate-in" style="--delay:0.4s">Upload your video or try a sample. Watch the AI pipeline run in real-time.</p>
+  </div>
+</section>
+
+<section class="demo-section">
+  <div class="container">
+
+    <!-- UPLOAD -->
+    <div class="demo-interface fade-up">
+      <div class="demo-upload-zone" id="uploadZone">
+        <div class="upload-content" id="uploadContent">
+          <div class="upload-icon">📁</div>
+          <h3>Drop your video here</h3>
+          <p>Supports MP4, MOV, AVI, MKV — up to 2GB</p>
+          <label for="fileInput" class="btn btn-primary upload-btn">Choose Video</label>
+          <input type="file" id="fileInput" accept="video/*" style="display:none"/>
+          <p class="upload-note">No video? Try our demo with a sample mentorship session below.</p>
+        </div>
+        <div class="upload-progress hidden" id="uploadProgress">
+          <div class="progress-ring-wrapper">
+            <svg class="progress-ring" width="100" height="100">
+              <circle class="progress-ring-bg" cx="50" cy="50" r="40"/>
+              <circle class="progress-ring-fill" id="progressCircle" cx="50" cy="50" r="40"/>
+            </svg>
+            <span class="progress-pct" id="progressPct">0%</span>
+          </div>
+          <p class="progress-label" id="progressLabel">Uploading video...</p>
+        </div>
+      </div>
+
+      <div class="demo-or"><span>or try a sample</span></div>
+
+      <button class="btn btn-ghost demo-sample-btn" id="sampleBtn">
+        ▶ Run Demo with Sample Video
+      </button>
+    </div>
+
+    <!-- PROCESSING -->
+    <div class="processing-section hidden" id="processingSection">
+      <h2 class="processing-title">🤖 AttentionX is Processing...</h2>
+      <div class="proc-file-info" id="procFileInfo">
+        <span class="proc-file-icon">🎬</span>
+        <span class="proc-file-name" id="procFileName">sample_mentorship_session.mp4</span>
+        <span class="proc-file-size">62 min · 1.2 GB</span>
+      </div>
+      <div class="processing-steps">
+        <div class="proc-step" id="step-transcribe">
+          <div class="proc-icon">🎧</div>
+          <div class="proc-info">
+            <span class="proc-label">Whisper Transcription</span>
+            <div class="proc-bar"><div class="proc-fill" style="width:0%"></div></div>
+          </div>
+          <span class="proc-status">Pending</span>
+        </div>
+        <div class="proc-step" id="step-analyze">
+          <div class="proc-icon">🧠</div>
+          <div class="proc-info">
+            <span class="proc-label">Gemini Peak Analysis</span>
+            <div class="proc-bar"><div class="proc-fill" style="width:0%"></div></div>
+          </div>
+          <span class="proc-status">Pending</span>
+        </div>
+        <div class="proc-step" id="step-crop">
+          <div class="proc-icon">📱</div>
+          <div class="proc-info">
+            <span class="proc-label">Smart Crop — MediaPipe Face Tracking</span>
+            <div class="proc-bar"><div class="proc-fill" style="width:0%"></div></div>
+          </div>
+          <span class="proc-status">Pending</span>
+        </div>
+        <div class="proc-step" id="step-caption">
+          <div class="proc-icon">✍️</div>
+          <div class="proc-info">
+            <span class="proc-label">Karaoke Caption Generation</span>
+            <div class="proc-bar"><div class="proc-fill" style="width:0%"></div></div>
+          </div>
+          <span class="proc-status">Pending</span>
+        </div>
+        <div class="proc-step" id="step-export">
+          <div class="proc-icon">🎬</div>
+          <div class="proc-info">
+            <span class="proc-label">Exporting Clips at 1080×1920</span>
+            <div class="proc-bar"><div class="proc-fill" style="width:0%"></div></div>
+          </div>
+          <span class="proc-status">Pending</span>
+        </div>
+      </div>
+      <p class="proc-elapsed" id="procElapsed">Elapsed: 0s</p>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="results-section hidden" id="resultsSection">
+      <div class="results-header">
+        <h2>✅ Processing Complete!</h2>
+        <p>AttentionX found <strong>5 emotional peaks</strong> and generated <strong>5 viral clips</strong> from your session:</p>
+        <div class="results-meta">
+          <span class="rmeta-item">⏱ Processed in 8m 42s</span>
+          <span class="rmeta-item">🎯 Avg Peak Score: 9.1/10</span>
+          <span class="rmeta-item">📐 Format: 1080×1920</span>
+        </div>
+      </div>
+      <div class="clips-grid">
+        <div class="clip-card">
+          <div class="clip-preview">
+            <div class="clip-thumb">
+              <span class="clip-play">▶</span>
+              <div class="clip-caption-preview">"The moment that changed everything..."</div>
+            </div>
+          </div>
+          <div class="clip-meta">
+            <span class="clip-time">0:34 – 1:12</span>
+            <span class="clip-score peak-high">9.2/10</span>
+          </div>
+          <h4>The Turning Point</h4>
+          <p class="clip-desc">High vocal energy + sentiment spike. Speaker's voice cracks — authentic emotional moment.</p>
+          <button class="btn btn-ghost clip-download" onclick="downloadDemo()">⬇ Download Clip</button>
+        </div>
+        <div class="clip-card">
+          <div class="clip-preview">
+            <div class="clip-thumb">
+              <span class="clip-play">▶</span>
+              <div class="clip-caption-preview">"Nobody tells you this about success..."</div>
+            </div>
+          </div>
+          <div class="clip-meta">
+            <span class="clip-time">4:21 – 5:05</span>
+            <span class="clip-score peak-high">8.7/10</span>
+          </div>
+          <h4>Hidden Truth Moment</h4>
+          <p class="clip-desc">Contrarian insight delivered at peak audio loudness. Strong hook potential.</p>
+          <button class="btn btn-ghost clip-download" onclick="downloadDemo()">⬇ Download Clip</button>
+        </div>
+        <div class="clip-card clip-featured">
+          <div class="clip-badge">🔥 Top Pick</div>
+          <div class="clip-preview">
+            <div class="clip-thumb">
+              <span class="clip-play">▶</span>
+              <div class="clip-caption-preview">"This strategy made me $1M in 6 months"</div>
+            </div>
+          </div>
+          <div class="clip-meta">
+            <span class="clip-time">9:48 – 10:31</span>
+            <span class="clip-score peak-top">9.5/10</span>
+          </div>
+          <h4>The Big Reveal</h4>
+          <p class="clip-desc">Highest energy moment in entire session. Gemini rated this the most shareable clip.</p>
+          <button class="btn btn-primary clip-download" onclick="downloadDemo()">⬇ Download Clip</button>
+        </div>
+        <div class="clip-card">
+          <div class="clip-preview">
+            <div class="clip-thumb">
+              <span class="clip-play">▶</span>
+              <div class="clip-caption-preview">"Stop doing this if you want to grow..."</div>
+            </div>
+          </div>
+          <div class="clip-meta">
+            <span class="clip-time">18:55 – 19:38</span>
+            <span class="clip-score peak-high">8.9/10</span>
+          </div>
+          <h4>The Warning</h4>
+          <p class="clip-desc">Cautionary advice delivered with urgency. High retention potential.</p>
+          <button class="btn btn-ghost clip-download" onclick="downloadDemo()">⬇ Download Clip</button>
+        </div>
+        <div class="clip-card">
+          <div class="clip-preview">
+            <div class="clip-thumb">
+              <span class="clip-play">▶</span>
+              <div class="clip-caption-preview">"One question changed my entire career..."</div>
+            </div>
+          </div>
+          <div class="clip-meta">
+            <span class="clip-time">47:22 – 48:06</span>
+            <span class="clip-score peak-high">9.0/10</span>
+          </div>
+          <h4>The Life Lesson</h4>
+          <p class="clip-desc">Storytelling peak — anecdote builds to a strong emotional payoff.</p>
+          <button class="btn btn-ghost clip-download" onclick="downloadDemo()">⬇ Download Clip</button>
+        </div>
+      </div>
+      <div class="results-actions">
+        <button class="btn btn-primary" onclick="downloadAllDemo()">📦 Download All Clips (ZIP)</button>
+        <button class="btn btn-ghost" onclick="resetDemo()">↩ Process Another Video</button>
+      </div>
+    </div>
+
+    <!-- NOTICE -->
+    <div class="demo-notice fade-up" id="demoNotice">
+      <div class="notice-icon">ℹ️</div>
+      <div class="notice-text">
+        <strong>About this demo:</strong> This is an interactive prototype simulating the AttentionX pipeline. In the full implementation, real AI models (Gemini 1.5 Flash, Whisper, MediaPipe) process your actual video content and export real .mp4 clips.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span></div>
+        <p class="footer-tagline">Turn hours of video into moments that matter — automatically.</p>
+      </div>
+      <div class="footer-nav-cols">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <a href="solution.html">How it Works</a>
+          <a href="tech.html">Tech Stack</a>
+          <a href="demo.html">Live Demo</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Learn</h4>
+          <a href="problem.html">The Problem</a>
+          <a href="solution.html">Our Solution</a>
+          <a href="team.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <a href="https://www.linkedin.com/in/bhargavi-nagaraj-967811381" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/bhargavi2048-boop" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="mailto:bhargavi2048@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 AttentionX. Built for the AttentionX AI Hackathon by Bhargavi N.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">🏆 AI Hackathon 2026</span>
+        <span class="footer-badge">⚡ Powered by Gemini</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>

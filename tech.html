@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Stack — AttentionX</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="problem.html" class="nav-link">Problem</a></li>
+      <li><a href="solution.html" class="nav-link">Solution</a></li>
+      <li><a href="tech.html" class="nav-link active">Tech Stack</a></li>
+      <li><a href="team.html" class="nav-link">Team</a></li>
+      <li><a href="demo.html" class="nav-link nav-cta">Live Demo</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="page-hero-content">
+    <div class="badge animate-in" style="--delay:0.1s">Resources & Tech</div>
+    <h1 class="page-hero-title animate-in" style="--delay:0.25s">The <span class="highlight-text">Stack</span> Behind<br/>the Magic</h1>
+    <p class="page-hero-sub animate-in" style="--delay:0.4s">Industry-grade AI APIs, Python libraries, and cloud infrastructure.</p>
+  </div>
+</section>
+
+<section class="tech-detail">
+  <div class="container">
+
+    <div class="tech-category fade-up">
+      <div class="tech-cat-header">
+        <span class="cat-num">01</span>
+        <h2>Core AI Engine — Multimodal & Gen AI APIs</h2>
+      </div>
+      <p class="cat-desc">You need an API that can understand video or text transcripts at scale.</p>
+      <div class="tech-cards">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">✦</span>
+            <div>
+              <h3>Google Gemini 1.5 Flash</h3>
+              <span class="tech-type">Multimodal AI</span>
+            </div>
+          </div>
+          <p>Massive 1M+ token context window — you can upload an entire long video or its transcript for analysis. Excellent at finding "the best parts" and generating hook headlines.</p>
+          <div class="tech-card-footer">
+            <a href="https://aistudio.google.com/" target="_blank" rel="noopener" class="tech-link">Google AI Studio ↗</a>
+          </div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">◆</span>
+            <div>
+              <h3>OpenAI Whisper</h3>
+              <span class="tech-type">Speech-to-Text</span>
+            </div>
+          </div>
+          <p>The industry standard for converting video audio into text with high-accuracy word-level timestamps. Powers the karaoke-style caption generation pipeline.</p>
+          <div class="tech-card-footer">
+            <a href="https://platform.openai.com/docs/guides/speech-to-text" target="_blank" rel="noopener" class="tech-link">OpenAI Speech-to-Text ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-category fade-up">
+      <div class="tech-cat-header">
+        <span class="cat-num">02</span>
+        <h2>Video & Audio Processing</h2>
+      </div>
+      <p class="cat-desc">Python libraries for the heavy lifting of cutting, cropping, and analyzing media.</p>
+      <div class="tech-cards">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">🎬</span>
+            <div>
+              <h3>MoviePy</h3>
+              <span class="tech-type">Video Processing</span>
+            </div>
+          </div>
+          <p>For cutting, cropping, compositing, and exporting video clips. Handles all video editing operations programmatically with frame-level precision.</p>
+          <div class="tech-card-footer">
+            <a href="https://zulko.github.io/moviepy/" target="_blank" rel="noopener" class="tech-link">MoviePy Documentation ↗</a>
+          </div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">🔊</span>
+            <div>
+              <h3>Librosa</h3>
+              <span class="tech-type">Audio Analysis</span>
+            </div>
+          </div>
+          <p>For analyzing audio "loudness" to find where the mentor is speaking most passionately. RMS energy tracking maps emotional peaks across the timeline.</p>
+          <div class="tech-card-footer">
+            <a href="https://librosa.org/doc/latest/index.html" target="_blank" rel="noopener" class="tech-link">Librosa Guide ↗</a>
+          </div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">👁</span>
+            <div>
+              <h3>MediaPipe</h3>
+              <span class="tech-type">Computer Vision</span>
+            </div>
+          </div>
+          <p>For Face Detection to help with smart-cropping to vertical. Google's ML framework provides real-time face landmark detection at 30fps+ for smooth tracking.</p>
+          <div class="tech-card-footer">
+            <a href="https://mediapipe-studio.webapps.google.com/" target="_blank" rel="noopener" class="tech-link">MediaPipe Solutions ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-category fade-up">
+      <div class="tech-cat-header">
+        <span class="cat-num">03</span>
+        <h2>Backend — Python-Based API</h2>
+      </div>
+      <p class="cat-desc">A server to handle video processing and communicate with AI models.</p>
+      <div class="tech-cards">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">⚡</span>
+            <div>
+              <h3>FastAPI</h3>
+              <span class="tech-type">API Framework</span>
+            </div>
+          </div>
+          <p>High performance and very easy to document. Async support handles long video processing tasks without blocking. Auto-generated OpenAPI docs included.</p>
+          <div class="tech-card-footer">
+            <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener" class="tech-link">FastAPI First Steps ↗</a>
+          </div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">🌶</span>
+            <div>
+              <h3>Flask</h3>
+              <span class="tech-type">Lightweight Framework</span>
+            </div>
+          </div>
+          <p>Simple and great for quick hackathon prototypes. Minimal boilerplate, instant routing, and easy to deploy for rapid iteration during development.</p>
+          <div class="tech-card-footer">
+            <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener" class="tech-link">Flask Hello World ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-category fade-up">
+      <div class="tech-cat-header">
+        <span class="cat-num">04</span>
+        <h2>Frontend & Styling</h2>
+      </div>
+      <p class="cat-desc">Tools for building the user interface quickly and beautifully.</p>
+      <div class="tech-cards">
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">🎨</span>
+            <div>
+              <h3>Pico.css</h3>
+              <span class="tech-type">CSS Framework</span>
+            </div>
+          </div>
+          <p>Drop this link into your HTML for instant and beautiful styling without writing a single line of CSS. Semantic, classless, and accessible by default.</p>
+          <div class="tech-card-footer">
+            <a href="https://picocss.com/" target="_blank" rel="noopener" class="tech-link">Pico.css Website ↗</a>
+          </div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <span class="tech-logo">📊</span>
+            <div>
+              <h3>Streamlit</h3>
+              <span class="tech-type">Python UI Framework</span>
+            </div>
+          </div>
+          <p>If you want to skip HTML/CSS entirely, use Streamlit to build a beautiful data-driven UI with pure Python. Perfect for AI-powered demo interfaces.</p>
+          <div class="tech-card-footer">
+            <a href="https://streamlit.io/" target="_blank" rel="noopener" class="tech-link">Streamlit Docs ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arch-diagram fade-up">
+      <h2>System Architecture</h2>
+      <div class="arch-flow">
+        <div class="arch-box">Upload<br/><small>Video Input</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">Whisper<br/><small>Transcription</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">Gemini + Librosa<br/><small>Peak Detection</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">MediaPipe + MoviePy<br/><small>Crop & Edit</small></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">Export<br/><small>Viral Clips</small></div>
+      </div>
+    </div>
+
+    <div class="cta-inline fade-up">
+      <p>See it all in action.</p>
+      <a href="demo.html" class="btn btn-primary">Try the Live Demo →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span></div>
+        <p class="footer-tagline">Turn hours of video into moments that matter — automatically.</p>
+      </div>
+      <div class="footer-nav-cols">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <a href="solution.html">How it Works</a>
+          <a href="tech.html">Tech Stack</a>
+          <a href="demo.html">Live Demo</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Learn</h4>
+          <a href="problem.html">The Problem</a>
+          <a href="solution.html">Our Solution</a>
+          <a href="team.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <a href="https://www.linkedin.com/in/bhargavi-nagaraj-967811381" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/bhargavi2048-boop" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="mailto:bhargavi2048@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 AttentionX. Built for the AttentionX AI Hackathon by Bhargavi N.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">🏆 AI Hackathon 2026</span>
+        <span class="footer-badge">⚡ Powered by Gemini</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solution — AttentionX</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="problem.html" class="nav-link">Problem</a></li>
+      <li><a href="solution.html" class="nav-link active">Solution</a></li>
+      <li><a href="tech.html" class="nav-link">Tech Stack</a></li>
+      <li><a href="team.html" class="nav-link">Team</a></li>
+      <li><a href="demo.html" class="nav-link nav-cta">Live Demo</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  <div class="page-hero-content">
+    <div class="badge animate-in" style="--delay:0.1s">Our Solution</div>
+    <h1 class="page-hero-title animate-in" style="--delay:0.25s">The <span class="highlight-text">AttentionX</span><br/>Engine</h1>
+    <p class="page-hero-sub animate-in" style="--delay:0.4s">GenAI + Multimodal models working together to repurpose content automatically.</p>
+  </div>
+</section>
+
+<section class="solution-detail">
+  <div class="container">
+
+    <div class="solution-overview fade-up">
+      <p class="lead-text">AttentionX is a platform where users upload long-form videos, and the app uses <strong>GenAI and Multimodal models</strong> to automatically extract, reformat, and caption the most impactful moments — turning one session into a week's worth of viral content.</p>
+    </div>
+
+    <div class="solution-pillars">
+      <div id="peaks" class="pillar-section fade-up">
+        <div class="pillar-header">
+          <span class="pillar-num">01</span>
+          <div class="pillar-icon">🧠</div>
+        </div>
+        <div class="pillar-body">
+          <h2>Emotional Peak Detection</h2>
+          <p>Our AI analyzes the full video transcript using <strong>Google Gemini 1.5 Flash</strong> with its massive 1M+ token context window. Combined with <strong>Librosa</strong> for audio loudness analysis, the system pinpoints exact moments where the speaker is most passionate, energetic, or insightful.</p>
+          <ul class="pillar-list">
+            <li>Audio spike detection for vocal energy mapping</li>
+            <li>Sentiment analysis on transcript text</li>
+            <li>Keyword clustering for topic significance</li>
+            <li>Outputs precise timestamps for clip extraction</li>
+          </ul>
+          <div class="tech-badges">
+            <span class="tech-badge">Gemini 1.5 Flash</span>
+            <span class="tech-badge">Librosa</span>
+            <span class="tech-badge">NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="crop" class="pillar-section fade-up">
+        <div class="pillar-header">
+          <span class="pillar-num">02</span>
+          <div class="pillar-icon">📱</div>
+        </div>
+        <div class="pillar-body">
+          <h2>Smart Crop to Vertical</h2>
+          <p>Using <strong>MediaPipe's Face Detection</strong> model, AttentionX tracks the speaker's face frame-by-frame. The crop window dynamically adjusts to keep the speaker perfectly centered, then <strong>MoviePy</strong> exports a crisp 9:16 vertical clip ready for TikTok, Instagram Reels, or YouTube Shorts.</p>
+          <ul class="pillar-list">
+            <li>Real-time face detection and tracking</li>
+            <li>Dynamic crop window adjustment</li>
+            <li>Smooth pan to follow movement</li>
+            <li>Exports at 1080×1920 resolution</li>
+          </ul>
+          <div class="tech-badges">
+            <span class="tech-badge">MediaPipe</span>
+            <span class="tech-badge">MoviePy</span>
+            <span class="tech-badge">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="captions" class="pillar-section fade-up">
+        <div class="pillar-header">
+          <span class="pillar-num">03</span>
+          <div class="pillar-icon">✍️</div>
+        </div>
+        <div class="pillar-body">
+          <h2>Dynamic Caption Generation</h2>
+          <p><strong>OpenAI Whisper</strong> transcribes the audio with high-accuracy timestamps. The captions are then styled as high-contrast, animated word-by-word overlays. Additionally, Gemini generates catchy "hook" headlines — the first line that stops the scroll.</p>
+          <ul class="pillar-list">
+            <li>Word-level timestamp accuracy from Whisper</li>
+            <li>Karaoke-style animated captions</li>
+            <li>High-contrast design for silent viewing</li>
+            <li>AI-generated scroll-stopping hooks</li>
+          </ul>
+          <div class="tech-badges">
+            <span class="tech-badge">OpenAI Whisper</span>
+            <span class="tech-badge">Gemini</span>
+            <span class="tech-badge">MoviePy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-banner fade-up">
+      <div class="result-inner">
+        <div class="result-icon">🚀</div>
+        <div class="result-text">
+          <h3>The Result</h3>
+          <p>A single 60-minute mentorship session becomes <strong>7+ shareable vertical clips</strong>, each with perfect framing, dynamic captions, and a viral hook — in minutes, not days.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-inline fade-up">
+      <p>Want to see the tech behind it?</p>
+      <a href="tech.html" class="btn btn-primary">Explore the Tech Stack →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span></div>
+        <p class="footer-tagline">Turn hours of video into moments that matter — automatically.</p>
+      </div>
+      <div class="footer-nav-cols">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <a href="solution.html">How it Works</a>
+          <a href="tech.html">Tech Stack</a>
+          <a href="demo.html">Live Demo</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Learn</h4>
+          <a href="problem.html">The Problem</a>
+          <a href="solution.html">Our Solution</a>
+          <a href="team.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <a href="https://www.linkedin.com/in/bhargavi-nagaraj-967811381" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/bhargavi2048-boop" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="mailto:bhargavi2048@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 AttentionX. Built for the AttentionX AI Hackathon by Bhargavi N.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">🏆 AI Hackathon 2026</span>
+        <span class="footer-badge">⚡ Powered by Gemini</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

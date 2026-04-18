@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AttentionX — AI-powered automated content repurposing engine. Turn hours of long-form video into viral short-form clips instantly."/>
+  <title>AttentionX — Automated Content Repurposing Engine</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="problem.html" class="nav-link">Problem</a></li>
+      <li><a href="solution.html" class="nav-link">Solution</a></li>
+      <li><a href="tech.html" class="nav-link">Tech Stack</a></li>
+      <li><a href="team.html" class="nav-link">Team</a></li>
+      <li><a href="demo.html" class="nav-link nav-cta">Live Demo</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="badge animate-in" style="--delay:0.1s"><span class="badge-dot"></span>AttentionX AI Hackathon — 2026</div>
+    <h1 class="hero-title animate-in" style="--delay:0.25s">Turn <span class="highlight-text">Hours</span> of Content<br/>into <span class="highlight-text">Moments</span> that Matter</h1>
+    <p class="hero-subtitle animate-in" style="--delay:0.4s">An AI-powered platform that automatically extracts emotional peaks,<br/>smart-crops to vertical, and generates dynamic captions from long-form video.</p>
+    <div class="hero-actions animate-in" style="--delay:0.55s">
+      <a href="demo.html" class="btn btn-primary"><span class="btn-text">Try Live Demo</span><span class="btn-icon">→</span></a>
+      <a href="solution.html" class="btn btn-ghost">Explore Solution</a>
+    </div>
+    <div class="hero-stats animate-in" style="--delay:0.7s">
+      <div class="stat"><span class="stat-num">60s</span><span class="stat-label">Clips Auto-Generated</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">9:16</span><span class="stat-label">Smart Crop Output</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">AI Captioned</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Clips per Session</span></div>
+    </div>
+  </div>
+  <div class="hero-visual animate-in" style="--delay:0.5s">
+    <div class="phone-mockup">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="video-preview">
+          <div class="video-waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="play-btn">▶</div>
+          <div class="caption-bar"><span class="caption-text typing-effect">"The moment that changed everything..."</span></div>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+        <div class="phone-ui">
+          <div class="like-btn">♥ 24.8K</div>
+          <div class="share-btn">⇧ Share</div>
+        </div>
+      </div>
+    </div>
+    <div class="floating-tag tag-1">🎯 Emotional Peak Detected</div>
+    <div class="floating-tag tag-2">📱 Smart Crop: 9:16</div>
+    <div class="floating-tag tag-3">✨ Caption Generated</div>
+  </div>
+</section>
+<section class="problem-strip">
+  <div class="strip-inner">
+    <div class="strip-item"><span class="strip-icon">⏱</span> 60-min videos. 60-sec attention spans.</div>
+    <div class="strip-sep">✦</div>
+    <div class="strip-item"><span class="strip-icon">🎬</span> Hours of footage. Zero virality.</div>
+    <div class="strip-sep">✦</div>
+    <div class="strip-item"><span class="strip-icon">✂️</span> Manual editing. Missed moments.</div>
+    <div class="strip-sep">✦</div>
+    <div class="strip-item"><span class="strip-icon">📉</span> Great content. Poor reach.</div>
+    <div class="strip-sep">✦</div>
+    <div class="strip-item"><span class="strip-icon">🔥</span> One session → 7 viral clips.</div>
+    <div class="strip-sep">✦</div>
+    <div class="strip-item"><span class="strip-icon">🤖</span> AI does the editing. You get the views.</div>
+    <div class="strip-sep">✦</div>
+    <div class="strip-item"><span class="strip-icon">⏱</span> 60-min videos. 60-sec attention spans.</div>
+  </div>
+</section>
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Core Features</div>
+      <h2 class="section-title">Three Pillars of <span class="accent">AttentionX</span></h2>
+      <p class="section-sub">Powered by GenAI and Multimodal models to extract, crop, and caption automatically.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card card-glow fade-up" data-index="1">
+        <div class="feature-icon">🧠</div>
+        <div class="feature-num">01</div>
+        <h3>Emotional Peak Detection</h3>
+        <p>Audio spikes and sentiment analysis powered by Gemini 1.5 Flash pinpoint the exact moments of energy, passion, and insight buried in long-form sessions.</p>
+        <div class="feature-tags"><span>Sentiment AI</span><span>Audio Analysis</span><span>NLP</span></div>
+        <a href="solution.html#peaks" class="feature-link">Learn more →</a>
+      </div>
+      <div class="feature-card card-glow fade-up" data-index="2">
+        <div class="feature-icon">📱</div>
+        <div class="feature-num">02</div>
+        <h3>Smart Crop to Vertical</h3>
+        <p>Computer vision tracks the speaker's face in real time with MediaPipe, ensuring they stay perfectly centered in 9:16 format for TikTok and Reels.</p>
+        <div class="feature-tags"><span>MediaPipe</span><span>Face Tracking</span><span>CV</span></div>
+        <a href="solution.html#crop" class="feature-link">Learn more →</a>
+      </div>
+      <div class="feature-card card-glow fade-up" data-index="3">
+        <div class="feature-icon">✍️</div>
+        <div class="feature-num">03</div>
+        <h3>Dynamic Caption Generation</h3>
+        <p>High-contrast timed overlays and catchy hook headlines generated automatically by Whisper AI to stop the scroll and boost retention by 3x.</p>
+        <div class="feature-tags"><span>Whisper AI</span><span>Karaoke Style</span><span>Auto-Timing</span></div>
+        <a href="solution.html#captions" class="feature-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="comparison-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Before vs After</div>
+      <h2 class="section-title">Why Creators <span class="accent">Switch to AttentionX</span></h2>
+    </div>
+    <div class="comparison-grid fade-up">
+      <div class="comparison-col col-before">
+        <div class="comp-header"><span class="comp-label bad">❌ Without AttentionX</span></div>
+        <ul class="comp-list">
+          <li>⏰ 5–8 hours of manual editing per video</li>
+          <li>🎯 Guessing which moments will resonate</li>
+          <li>📐 Manually re-framing for 9:16</li>
+          <li>✍️ Typing captions word by word</li>
+          <li>💸 Hiring editors for $500+ per video</li>
+          <li>📅 Publishing once a week at most</li>
+          <li>📊 Low reach and poor engagement</li>
+        </ul>
+      </div>
+      <div class="comparison-divider"><div class="divider-vs">VS</div></div>
+      <div class="comparison-col col-after">
+        <div class="comp-header"><span class="comp-label good">✅ With AttentionX</span></div>
+        <ul class="comp-list">
+          <li>⚡ Full pipeline runs in under 10 minutes</li>
+          <li>🧠 AI detects peak emotional moments</li>
+          <li>📱 Perfect 9:16 auto-crop every time</li>
+          <li>🎤 Karaoke captions generated instantly</li>
+          <li>💰 Zero editing cost — fully automated</li>
+          <li>📆 Publish 7+ clips from one session</li>
+          <li>🚀 Viral-ready content, every time</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="how-it-works" id="how">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Process</div>
+      <h2 class="section-title">From Upload to <span class="accent">Viral</span> in Minutes</h2>
+      <p class="section-sub">Four simple steps. All automated. Zero friction.</p>
+    </div>
+    <div class="steps-timeline">
+      <div class="step fade-up" data-step="1">
+        <div class="step-dot"></div>
+        <div class="step-content">
+          <div class="step-icon">📤</div>
+          <h3>Upload Long-Form Video</h3>
+          <p>Upload your lecture, podcast, or workshop. MP4, MOV, AVI — any format, any length up to 2GB.</p>
+        </div>
+      </div>
+      <div class="step fade-up" data-step="2">
+        <div class="step-dot"></div>
+        <div class="step-content">
+          <div class="step-icon">🔍</div>
+          <h3>AI Analyzes the Content</h3>
+          <p>Gemini 1.5 Flash scans the full transcript for emotional peaks and key moments using 1M+ context window.</p>
+        </div>
+      </div>
+      <div class="step fade-up" data-step="3">
+        <div class="step-dot"></div>
+        <div class="step-content">
+          <div class="step-icon">✂️</div>
+          <h3>Smart Clip Extraction</h3>
+          <p>MoviePy cuts the clips, MediaPipe centers the speaker, Librosa finds energy peaks — all automated.</p>
+        </div>
+      </div>
+      <div class="step fade-up" data-step="4">
+        <div class="step-dot"></div>
+        <div class="step-content">
+          <div class="step-icon">🎬</div>
+          <h3>Caption & Export</h3>
+          <p>Dynamic karaoke captions rendered, hooks added, clips exported at 1080×1920 ready to post.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="use-cases">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Use Cases</div>
+      <h2 class="section-title">Built for <span class="accent">Every Creator</span></h2>
+      <p class="section-sub">Whether you're an educator, podcaster, or business coach — AttentionX amplifies your reach.</p>
+    </div>
+    <div class="usecases-grid fade-up">
+      <div class="usecase-card">
+        <div class="usecase-icon">👩‍🏫</div>
+        <h3>Educators & Professors</h3>
+        <p>Turn 3-hour university lectures into 60-second insights that help students and reach millions who never enrolled.</p>
+        <div class="usecase-example">"Prof Rao's lecture clip hit 2M views on Reels."</div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">🎙️</div>
+        <h3>Podcast Creators</h3>
+        <p>Your 2-hour interview has 10 golden moments buried inside it. AttentionX finds and packages all of them automatically.</p>
+        <div class="usecase-example">"From 1 episode → 11 clips in 8 minutes."</div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">💼</div>
+        <h3>Business Mentors</h3>
+        <p>Coaching sessions and webinars transformed into shareable wisdom bites that attract new clients organically.</p>
+        <div class="usecase-example">"Booked 3 new clients from one clipped talk."</div>
+      </div>
+      <div class="usecase-card">
+        <div class="usecase-icon">🧑‍💻</div>
+        <h3>Tech Speakers</h3>
+        <p>Conference talks and demo videos repurposed into TikTok and LinkedIn content that builds developer audiences.</p>
+        <div class="usecase-example">"Dev conf keynote → 8 viral tech shorts."</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="metrics-section">
+  <div class="container">
+    <div class="metrics-banner fade-up">
+      <div class="metric-item"><span class="metric-big">10x</span><span class="metric-label">Faster than manual editing</span></div>
+      <div class="metric-divider"></div>
+      <div class="metric-item"><span class="metric-big">7+</span><span class="metric-label">Clips per session</span></div>
+      <div class="metric-divider"></div>
+      <div class="metric-item"><span class="metric-big">95%</span><span class="metric-label">Caption accuracy</span></div>
+      <div class="metric-divider"></div>
+      <div class="metric-item"><span class="metric-big">$0</span><span class="metric-label">Editing cost</span></div>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">What They're Saying</div>
+      <h2 class="section-title">Early Reactions to <span class="accent">AttentionX</span></h2>
+    </div>
+    <div class="testimonials-grid fade-up">
+      <div class="testimonial-card">
+        <div class="testi-quote">"</div>
+        <p>AttentionX found the clip from my podcast that even I forgot — the 47-second moment where everything clicked. That clip alone got 180K views.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AR</div>
+          <div><span class="testi-name">Arjun Rao</span><span class="testi-title">EdTech Podcaster</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card testi-featured">
+        <div class="testi-quote">"</div>
+        <p>I spent 6 hours editing a workshop manually last month. AttentionX did the same job in 9 minutes — and honestly, the AI's picks were better than mine.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PS</div>
+          <div><span class="testi-name">Priya Sharma</span><span class="testi-title">Business Coach & Speaker</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testi-quote">"</div>
+        <p>The karaoke-style captions are next level. My engagement went up 340% because viewers follow along even on mute. Absolute game changer.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">KM</div>
+          <div><span class="testi-name">Karthik M</span><span class="testi-title">CS Professor, IIT</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Common <span class="accent">Questions</span></h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What video formats does AttentionX support?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>AttentionX supports all major video formats including MP4, MOV, AVI, MKV, and WebM. Files can be up to 2GB. For best results, we recommend MP4 with H.264 encoding at 1080p or higher.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>How does the AI decide which moments to clip?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Our pipeline combines three signals: (1) Audio energy analysis using Librosa detects where the speaker's voice is most passionate, (2) Sentiment analysis on the Whisper transcript identifies emotionally charged language, and (3) Gemini 1.5 Flash synthesizes the full context to score each moment for shareability.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>How long does processing take?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>A 60-minute video typically takes 8–12 minutes end-to-end: ~2 min for transcription, ~3 min for AI analysis, ~4 min for video rendering and export. Clips are processed in parallel to minimize total time.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>What resolution are the output clips?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Output clips are exported at 1080×1920 (9:16) — the standard for TikTok, Instagram Reels, and YouTube Shorts. Captions are rendered at full resolution and positioned in the lower third for optimal mobile readability.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Can I customize the caption style?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes! In the full implementation you can choose from preset caption styles (high-contrast, minimal, bold, neon) and adjust font size, color, and animation speed. AI-generated hooks can also be regenerated with different tones (professional, casual, provocative).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="notify-section">
+  <div class="container">
+    <div class="notify-card fade-up">
+      <div class="notify-icon">🚀</div>
+      <h2 class="notify-title">Get Early Access to <span class="accent">AttentionX</span></h2>
+      <p class="notify-sub">Join the waitlist and be the first to try the full platform when it launches.</p>
+      <div class="notify-form">
+        <input type="email" id="notifyEmail" class="notify-input" placeholder="your@email.com" autocomplete="email"/>
+        <button class="btn btn-primary notify-btn" onclick="handleNotify()">Notify Me</button>
+      </div>
+      <p class="notify-note" id="notifyMsg"></p>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="cta-bg"><div class="cta-orb"></div></div>
+  <div class="container cta-inner">
+    <h2 class="cta-title">Ready to Make Your Content <span class="accent">Unstoppable?</span></h2>
+    <p class="cta-sub">Join the revolution. Turn one session into a week of viral shorts.</p>
+    <div class="cta-actions">
+      <a href="demo.html" class="btn btn-primary btn-large">Try the Live Demo</a>
+      <a href="team.html" class="btn btn-ghost btn-large">Meet the Team</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-bracket">[</span>Attention<span class="logo-x">X</span><span class="logo-bracket">]</span></div>
+        <p class="footer-tagline">Turn hours of video into moments that matter — automatically.</p>
+      </div>
+      <div class="footer-nav-cols">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <a href="solution.html">How it Works</a>
+          <a href="tech.html">Tech Stack</a>
+          <a href="demo.html">Live Demo</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Learn</h4>
+          <a href="problem.html">The Problem</a>
+          <a href="solution.html">Our Solution</a>
+          <a href="team.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <a href="https://www.linkedin.com/in/bhargavi-nagaraj-967811381" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/bhargavi2048-boop" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="mailto:bhargavi2048@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 AttentionX. Built for the AttentionX AI Hackathon by Bhargavi N.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">🏆 AI Hackathon 2026</span>
+        <span class="footer-badge">⚡ Powered by Gemini</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
